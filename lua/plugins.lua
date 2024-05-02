@@ -164,7 +164,7 @@ require("lazy").setup({
 			},
 		},
 		keys = {
-			{ "<F7>", "ToggleTerm<CR>", { desc = "toggle a floating termial" } },
+			{ "<F7>", ":ToggleTerm<CR>", { desc = "toggle a floating termial" } },
 		},
 	},
 	{ -- Useful plugin to show you pending keybinds.
@@ -730,6 +730,19 @@ require("lazy").setup({
 			--    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
 			--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 		end,
+	},
+	{ -- neotree
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
+			-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+		},
+		keys = {
+			{ "<F5>", ":Neotree toggle<cr>", { desc = "toggle a floating termial" } },
+		},
 	},
 
 	-- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
