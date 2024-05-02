@@ -4,10 +4,9 @@
 require("options")
 
 -- plugings: install, update, setup, configure, keymaps
-	-- lazy
---require("plugins")
+-- lazy:
+require("plugins")
 
 -- mapping: keymaps and shortcuts : regular & plugins keymaps in different files
---require("reg-maps")
--- require("plugin-maps")
-
+require("maps-std")
+require("maps-plugins")

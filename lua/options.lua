@@ -1,24 +1,54 @@
--- vim options:
--- for more on vimoptions 
--- => :help vim.opt
--- in order to access the vimscript via Lua use the 'vim' global table scope.
+-- print("Hello World from NeoVim")
+-- print("-----------------------")
 
--- set ',' as the leader key:
-vim.g.leader = ","
-vim.g.localleader = ","
+-- set leader key
+vim.g.mapleader = ","
+vim.g.maplocalleader = "\\"
 
--- Nerd font: ( set false if fonts are not installed ) 
+-- Nerd font: ( set false if fonts are not installed )
 vim.g.have_nerd_font = true
 
--- enable line number and relative numbers
 vim.opt.number = true
 -- vim.opt.relativenumber = true
-
--- enable mouse  ( toggle mouse in maps-regenable and disable mouse <C-a> )
-vim.opt.mouse = 'a'
-
--- sync clipboard between os and neoVim
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+-- vim.opt.wrap = false
+vim.opt.expandtab = true
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.mouse = "a"
+-- Synchronized the system clipboard with NeoVim's clipboard.
 vim.opt.clipboard = "unnamedplus"
+
+-- this keep the cursor in the middle of the screen while
+-- scrolling up and down
+vim.opt.scrolloff = 10
+
+-- visual mode ( enable the virtualedit )
+-- allow virtual edit for the visual block mode (virtual editing
+-- the cursor can be positioned where there is no actual character)
+vim.opt.virtualedit = "block"
+
+-- Open a splitwindow below with preview when using search and replace (:%s/tochange/changed)
+vim.opt.inccommand = "split"
+
+-- ignore case UNLESS \C or one or more capital letters are present in search term
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
+-- keep signcolumn on by default
+vim.opt.signcolumn = "yes"
+
+-- decrease update time
+vim.opt.updatetime = 250
+
+-- decrease mapped sequence wait time
+-- display which-key popup sooner
+vim.opt.timeoutlen = 300
+-- NeoVim uses the terminal color scheme ( extend the terminal to more better support 24bit ..)
+
+--termgui colors
+vim.opt.termguicolors = true
 
 -- save undo history to a file
 vim.opt.undofile = true
@@ -29,43 +59,15 @@ vim.opt.showmode = false
 -- Enable break indent
 vim.opt.breakindent = true
 
--- ignore case UNLESS \C or one or more capital letters are present in search term
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-
--- keep signcolumn on by default
-vim.opt.signcolumn = true
-
--- decrease update time
-vim.opt.updatetime = 250
-
--- decrease mapped sequence wait time
--- display which-key popup sooner
-vim.opt.timeoutlen = 300
-
--- new split behavior
-vim.opt.splitbelow = true
-vim.opt.splitright = true
-
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
--- preview substitutions live as we type
-vim.opt.inccommand = "split"
-
--- show cursor line 
-vim.opt.cursorline =  true
-
--- set min num of screen line to keep above and below the cursor while scrolling
-vim.opt.scrolloff = 10
+-- show cursor line
+vim.opt.cursorline = true
 
 -- set highligt on search , but clear highlight on <Esc> in normal mode
-vim.opt.hesearch =  true
--- vim.opt. =  true
--- vim.opt. =  true
--- vim.opt. =  true
--- vim.opt. =  true
-
+vim.opt.hlsearch = true
+----------------------------------------------------------------------------------------------
