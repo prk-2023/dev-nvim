@@ -163,7 +163,9 @@ require("lazy").setup({
 				highlights = { border = "Normal", background = "Normal" },
 			},
 		},
-		--keys = { '[<F7>]', '<cmd>ToggleTerm<CR>', {desc = 'toggle a floating termial' } },
+		keys = {
+			{ "<F7>", "ToggleTerm<CR>", { desc = "toggle a floating termial" } },
+		},
 	},
 	{ -- Useful plugin to show you pending keybinds.
 		"folke/which-key.nvim",
