@@ -32,6 +32,11 @@ require("lazy").setup({
 	},
 	{ -- color scheme
 		"luisiacc/gruvbox-baby",
+		config = function()
+			vim.g.gruvbox_baby_function_style = "NONE"
+			vim.g.gruvbox_baby_keyword_style = "italic"
+			vim.g.gruvbox_baby_highlights = { Normal = { fg = "#123123", bg = "NONE", style = "underline" } }
+		end,
 	},
 	{ -- highlight TODO , NOTE:todo, nores, etc in comments:
 		"folke/todo-comments.nvim",
@@ -639,9 +644,13 @@ require("lazy").setup({
 					-- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
 					--    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
 				}),
-                -- formatting = { fields = { "kind", "abbr", "menu" }, format = lspkind_status_ok  },
+				-- formatting = { fields = { "kind", "abbr", "menu" }, format = lspkind_status_ok  },
 				duplicates = { nvim_lsp = 1, luasnip = 1, cmp_tabnine = 1, buffer = 1, path = 1 },
-                snippet = { expand = function(args) Luasnip.expand(args.body) end, },
+				snippet = {
+					expand = function(args)
+						Luasnip.expand(args.body)
+					end,
+				},
 				sources = {
 					{ name = "nvim_lsp", priority = 1000 },
 					{ name = "luasnip", priority = 750 },
