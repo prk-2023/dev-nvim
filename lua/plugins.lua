@@ -763,20 +763,20 @@ require("lazy").setup({
 				--    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 			end,
 		},
-		{ -- neotree
-			"nvim-neo-tree/neo-tree.nvim",
-			branch = "v3.x",
-			dependencies = {
-				"nvim-lua/plenary.nvim",
-				"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-				"MunifTanjim/nui.nvim",
-				-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
-			},
-			keys = {
-				{ "<leader><F5>", ":Neotree toggle<cr>", { desc = "toggle a floating termial" } },
-				{ "<leader>e", ":Neotree toggle<cr>", { desc = "toggle a floating termial" } },
-			},
-		},
+		--{ -- neotree
+		--"nvim-neo-tree/neo-tree.nvim",
+		--branch = "v3.x",
+		--dependencies = {
+		--	"nvim-lua/plenary.nvim",
+		--	"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+		--	"MunifTanjim/nui.nvim",
+		-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+		--	},
+		--	keys = {
+		--		{ "<leader><F5>", ":Neotree toggle<cr>", { desc = "toggle a floating termial" } },
+		--		{ "<leader>e", ":Neotree toggle<cr>", { desc = "toggle a floating termial" } },
+		--	},
+		--},
 
 		-- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
 		-- init.lua. If you want these files, they are in the repository, so you can just download them and
@@ -805,6 +805,7 @@ require("lazy").setup({
 		require("custom.lint"), -- adds gitsigns recommend keymaps
 		require("custom.indent_line"), -- adds gitsigns recommend keymaps
 		require("custom.debug"), -- adds gitsigns recommend keymaps
+		require("custom.neo-tree"), -- adds gitsigns recommend keymaps
 	},
 }, {
 	ui = {
