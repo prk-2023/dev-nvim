@@ -84,8 +84,9 @@ require("lazy").setup({
 					"markdown",
 					"vim",
 					"vimdoc",
-					"python",
+					"make",
 					"rust",
+					"python",
 				},
 				-- Autoinstall languages that are not installed
 				auto_install = true,
@@ -182,7 +183,7 @@ require("lazy").setup({
 				},
 			},
 			keys = {
-				{ "<F7>", ":ToggleTerm<CR>", { desc = "toggle a floating termial" } },
+				{ "<leader><F7>", ":ToggleTerm<CR>", { desc = "toggle a floating termial" } },
 			},
 		},
 		{ -- Useful plugin to show you pending keybinds.
@@ -723,7 +724,18 @@ require("lazy").setup({
 			"nvim-treesitter/nvim-treesitter",
 			build = ":TSUpdate",
 			opts = {
-				ensure_installed = { "bash", "c", "html", "lua", "luadoc", "markdown", "vim", "vimdoc" },
+				ensure_installed = {
+					"bash",
+					"c",
+					"html",
+					"lua",
+					"luadoc",
+					"markdown",
+					"vim",
+					"vimdoc",
+					"python",
+					"rust",
+				},
 				-- Autoinstall languages that are not installed
 				auto_install = true,
 				highlight = {
@@ -761,7 +773,8 @@ require("lazy").setup({
 				-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 			},
 			keys = {
-				{ "<F5>", ":Neotree toggle<cr>", { desc = "toggle a floating termial" } },
+				{ "<leader><F5>", ":Neotree toggle<cr>", { desc = "toggle a floating termial" } },
+				{ "<leader>e", ":Neotree toggle<cr>", { desc = "toggle a floating termial" } },
 			},
 		},
 
