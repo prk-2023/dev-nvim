@@ -23,3 +23,6 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 -- toggle mouse enable/disable
 vim.keymap.set("n", "<leader>aa", ":set mouse=a<cr>", { desc = "enable mouse" })
 vim.keymap.set("n", "<leader>ad", ":set mouse-=a<cr>", { desc = "disable mouse" })
+
+vim.keymap.set("n", "<C-q>", ":q!<cr>", { desc = "Force Quit" })
+vim.keymap.set("n", "<C-s>", ":w!<cr>", { desc = "Force write" })
