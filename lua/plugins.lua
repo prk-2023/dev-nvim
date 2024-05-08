@@ -27,7 +27,8 @@ require("lazy").setup({
 		config = function()
 			-- vim.cmd([[colorscheme kanagawa-wave]])
 			-- vim.cmd.colorscheme("kanagawa-dragon")
-			vim.cmd.colorscheme("kanagawa-wave")
+			--vim.cmd.colorscheme("kanagawa-wave")
+			vim.cmd.colorscheme("gruvbox")
 		end,
 	},
 	{ -- gruvbox colorscheme
@@ -36,6 +37,7 @@ require("lazy").setup({
 		-- config = true,
 		config = function()
 			vim.g.gruvbox_keyword_style = "italic"
+			vim.cmd.colorscheme("gruvbox")
 			--- vim.g.gruvbox_highlights = { Normal = { fg = "#123123", bg = "NONE", style = "underline" } }
 		end,
 	},
@@ -483,6 +485,9 @@ require("lazy").setup({
 						},
 					},
 				},
+				cpptools = {},
+				--luaformatter = {},
+				codelldb = {},
 			}
 			-- Ensure the servers and tools above are installed
 			--  To check the current status of installed tools and/or manually install
@@ -730,10 +735,11 @@ require("lazy").setup({
 	-- { import = 'custom.plugins' },
 	require("custom.autopairs"),
 	require("custom.gitsigns"), -- adds gitsigns recommend keymaps
-	require("custom.lint"), -- adds gitsigns recommend keymaps
-	require("custom.indent_line"), -- adds gitsigns recommend keymaps
-	require("custom.debug"), -- adds gitsigns recommend keymaps
-	require("custom.neo-tree"), -- adds gitsigns recommend keymaps
+	require("custom.lint"), --
+	require("custom.indent_line"), --
+	require("custom.debug"), -- adds
+	require("custom.neo-tree"), -- adds
+	--	require("custom.rustaceanvim"), -- adds rustaceanvim [rust-tools: is not maintained anymore]
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
 		-- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
