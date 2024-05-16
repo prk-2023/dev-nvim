@@ -26,3 +26,9 @@ vim.keymap.set("n", "<leader>ad", ":set mouse-=a<cr>", { desc = "disable mouse" 
 
 vim.keymap.set("n", "<C-q>", ":q!<cr>", { desc = "Force Quit" })
 vim.keymap.set("n", "<C-s>", ":w!<cr>", { desc = "Force write" })
+
+-- resize splits: NOTE:   key binding  M- = alt-key
+vim.keymap.set("n", "<M-,>", "<c-w>3<", { desc = "vertically shrink current split 3%" })
+vim.keymap.set("n", "<M-.>", "<c-w>3>", { desc = "vertically expand current split by 3%" })
+vim.keymap.set("n", "<M-t>", "<C-W>+", { desc = "horizontal split: taller " })
+vim.keymap.set("n", "<M-s>", "<C-W>-", { desc = "horizontal split: shorter" })

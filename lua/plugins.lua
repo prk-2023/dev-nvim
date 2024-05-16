@@ -49,6 +49,14 @@ require("lazy").setup({
 			vim.g.gruvbox_baby_highlights = { Normal = { fg = "#123123", bg = "NONE", style = "underline" } }
 		end,
 	},
+	{
+		"tjdevries/colorbuddy.nvim",
+		"tjdevries/gruvbuddy.nvim",
+		config = function()
+			vim.g.gruvbox_keyword_style = "italic"
+			--vim.cmd.colorscheme("gruvbuddy")
+		end,
+	},
 	{ -- highlight TODO , NOTE:todo, nores, etc in comments:
 		"folke/todo-comments.nvim",
 		event = "VimEnter",
@@ -739,6 +747,10 @@ require("lazy").setup({
 	require("custom.indent_line"), --
 	require("custom.debug"), -- adds
 	require("custom.neo-tree"), -- adds
+	require("custom.comment"), -- adds
+	--require("custom.obsidian"), -- adds
+	require("custom.trouble"), -- adds
+
 	--	require("custom.rustaceanvim"), -- adds rustaceanvim [rust-tools: is not maintained anymore]
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
