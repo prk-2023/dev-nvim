@@ -109,6 +109,21 @@ require("lazy").setup({
 				"rust",
 				"python",
 			},
+			cmd = {
+				"TSBufDisable",
+				"TSBufEnable",
+				"TSBufToggle",
+				"TSDisable",
+				"TSEnable",
+				"TSToggle",
+				"TSInstall",
+				"TSInstallInfo",
+				"TSInstallSync",
+				"TSModuleInfo",
+				"TSUninstall",
+				"TSUpdate",
+				"TSUpdateSync",
+			},
 			-- Autoinstall languages that are not installed
 			auto_install = true,
 			highlight = {
@@ -120,6 +135,7 @@ require("lazy").setup({
 			},
 			indent = { enable = true, disable = { "ruby" } },
 		},
+
 		config = function(_, opts)
 			-- [[ Configure Treesitter ]] See `:help nvim-treesitter`
 			-- Prefer git instead of curl in order to improve connectivity in some environments
@@ -564,6 +580,7 @@ require("lazy").setup({
 	{ -- Autocompletion
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
+		priority = 100,
 		dependencies = {
 			-- Snippet Engine & its associated nvim-cmp source
 			{
