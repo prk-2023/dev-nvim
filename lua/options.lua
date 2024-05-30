@@ -18,8 +18,9 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.mouse = "a"
 -- Synchronized the system clipboard with NeoVim's clipboard.
-vim.opt.clipboard = "unnamedplus"
-
+vim.opt.clipboard = "unnamedplus" -- install the "xsel" or "xclip" on the pc
+---vim.api.nvim_set_option("clipboard", "unnamedplus") //old way
+--
 -- this keep the cursor in the middle of the screen while
 -- scrolling up and down
 vim.opt.scrolloff = 10

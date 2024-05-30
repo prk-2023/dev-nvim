@@ -215,12 +215,13 @@ require("lazy").setup({
 			shading_factor = 2,
 			direction = "horizontal", -- "float", --"vertical"
 			float_opts = {
-				border = "curved",
+				border = "shadow", -- curved, double, shadow,
 				highlights = { border = "Normal", background = "Normal" },
 			},
 		},
 		keys = {
-			{ "<leader><F7>", ":ToggleTerm<CR>", { desc = "toggle a floating termial" } },
+			{ "<leader><F7>", ":ToggleTerm<CR>", { desc = "toggle a termial" } },
+			{ "<F6>", ":ToggleTerm direction=float<CR>", { desc = "toggle a floating termial" } },
 		},
 	},
 	{ -- Useful plugin to show you pending keybinds.
@@ -486,7 +487,27 @@ require("lazy").setup({
 				clangd = {},
 				-- gopls = {},
 				pyright = {},
-				rust_analyzer = {},
+				rust_analyzer = {
+					on_attach = on_attach,
+					settings = {
+						["rust-analyzer"] = {
+							imports = {
+								granularity = {
+									group = "module",
+								},
+								prefix = "self",
+							},
+							cargo = {
+								buildScripts = {
+									enable = true,
+								},
+							},
+							procMacro = {
+								enable = true,
+							},
+						},
+					},
+				},
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--
 				-- Some languages (like typescript) have entire language plugins that can be useful:
@@ -767,6 +788,7 @@ require("lazy").setup({
 	require("custom.comment"), -- adds
 	--require("custom.obsidian"), -- adds
 	require("custom.trouble"), -- adds
+	require("custom.lazygit"), -- add lazygit
 
 	--	require("custom.rustaceanvim"), -- adds rustaceanvim [rust-tools: is not maintained anymore]
 	ui = {
