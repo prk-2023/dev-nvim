@@ -789,6 +789,7 @@ require("lazy").setup({
 	--require("custom.obsidian"), -- adds
 	require("custom.trouble"), -- adds
 	require("custom.lazygit"), -- add lazygit
+	-- require("custom.flirt"), -- animate floating window
 
 	--	require("custom.rustaceanvim"), -- adds rustaceanvim [rust-tools: is not maintained anymore]
 	ui = {

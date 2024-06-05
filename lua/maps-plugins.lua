@@ -18,3 +18,17 @@ end, { desc = "Trouble locallist" })
 vim.keymap.set("n", "gR", function()
 	require("trouble").toggle("lsp_references")
 end, { desc = "Trouble lsp references" })
+
+-- local f = require("flirt")
+-- vim.keymap.set("n", "<leader><left>", function()
+-- 	f.move("left")
+-- end, {})
+-- vim.keymap.set("n", "<leader><right>", function()
+-- 	f.move("right")
+-- end, {})
+-- vim.keymap.set("n", "<leader><up>", function()
+-- 	f.move("up")
+-- end, {}) -- etc
+-- vim.keymap.set("n", "<leader><down>", function()
+-- 	f.move("down")
+-- end, {}) -- etc
