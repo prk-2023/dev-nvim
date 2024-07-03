@@ -47,6 +47,9 @@ Intro: NeoVim is a text editor similar with Vim ( uses the underlying vim librar
     │   ├── maps-std.lua
     │   ├── options.lua
     │   └── plugins.lua
+    ├── after
+    │   └── ftplugin
+    │           └── c.lua
     └── README.md
 
 ---
@@ -61,4 +64,7 @@ Intro: NeoVim is a text editor similar with Vim ( uses the underlying vim librar
     
 TODO: maps-plugins can be dropped as keymaps are setup within the plugin section.
 
+- after/ftplugin:
+    the folder has scripts that will be executed after all the plugins and modules are done setting up if the document to be 
+    opened matches with the language type ( ex: c.lua : would be invoked after all pluggins are setup for editing c files.)
 - Tested by cloning to different pc. - [OK]

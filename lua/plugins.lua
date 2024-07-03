@@ -29,6 +29,7 @@ require("lazy").setup({
 			-- vim.cmd.colorscheme("kanagawa-dragon")
 			--vim.cmd.colorscheme("kanagawa-wave")
 			vim.cmd.colorscheme("gruvbox")
+			--vim.cmd.colorscheme("gruvbox-high-contrast")
 		end,
 	},
 	{ -- gruvbox colorscheme
@@ -104,7 +105,6 @@ require("lazy").setup({
 				"luadoc",
 				"markdown_inline",
 				"vim",
-				"vimdoc",
 				"make",
 				"rust",
 				"python",
@@ -215,7 +215,7 @@ require("lazy").setup({
 			shading_factor = 2,
 			direction = "horizontal", -- "float", --"vertical"
 			float_opts = {
-				border = "shadow", -- curved, double, shadow,
+				border = "curved", -- curved, double, shadow,
 				highlights = { border = "Normal", background = "Normal" },
 			},
 		},
@@ -789,7 +789,7 @@ require("lazy").setup({
 	--require("custom.obsidian"), -- adds
 	require("custom.trouble"), -- adds
 	require("custom.lazygit"), -- add lazygit
-	-- require("custom.flirt"), -- animate floating window
+	require("custom.colorschemes"), --
 
 	--	require("custom.rustaceanvim"), -- adds rustaceanvim [rust-tools: is not maintained anymore]
 	ui = {

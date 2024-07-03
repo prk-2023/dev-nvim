@@ -15,11 +15,34 @@ return {
 	},
 	opts = {
 		filesystem = {
+			filtered_items = {
+				visible = true, -- This is what you want: If you set this to `true`, all "hide" just mean "dimmed out"
+				hide_dotfiles = false,
+				hide_gitignored = true,
+			},
 			window = {
-				width = 27, -- 40
+				width = 32, -- 40
 				mappings = {
 					["\\"] = "close_window",
 				},
+			},
+		},
+		git_status = {
+			symbols = {
+				-- Change type
+				added = "", -- or "✚", but this is redundant info if you use git_status_colors on the name
+				modified = "", -- or "", but this is redundant info if you use git_status_colors on the name
+				deleted = "✖", -- this can only be used in the git_status source
+				renamed = "󰁕", -- this can only be used in the git_status source
+				-- Status type
+				untracked = "",
+				ignored = "",
+				unstaged = "󰄱",
+				staged = "",
+				conflict = "",
+			},
+			window = {
+				position = "float",
 			},
 		},
 	},
