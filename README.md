@@ -40,7 +40,7 @@ Intro: NeoVim is a text editor similar with Vim ( uses the underlying vim librar
             - github the cloned copy should work out of the box on invoking NeoVim.
 
 - Layout:
-    
+```    
     ├── init.lua
     ├── lua
     │   ├── maps-plugins.lua
@@ -51,7 +51,7 @@ Intro: NeoVim is a text editor similar with Vim ( uses the underlying vim librar
     │   └── ftplugin
     │           └── c.lua
     └── README.md
-
+```
 ---
 # plugings:
 
