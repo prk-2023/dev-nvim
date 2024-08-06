@@ -187,15 +187,15 @@ require("lazy").setup({
 		event = {},
 		cmd = { "Gtags" },
 		keys = {
-			{ "<leader>c", ":GtagsCursor<CR>", { desc = "Gtag Cursor definition or reference" } },
-			{ "<leader>r", ":Gtags -r ", { desc = "Go to reference point " } },
-			{ "<leader>s", ":Gtags -s ", { desc = "Go to any symbol not defined in GTAGS" } },
-			{ "<leader>f", ":Gtags -f ", { desc = "list objects in the file" } },
-			{ "<leader>G", ":Gtags -g ", { desc = "grep " } },
+			{ "<C-c>", ":GtagsCursor<CR>", { desc = "Gtag Cursor definition or reference" } },
+			{ "<C-r>", ":Gtags -r ", { desc = "Go to reference point " } },
+			{ "<C-s>", ":Gtags -s ", { desc = "Go to any symbol not defined in GTAGS" } },
+			{ "<C-f>", ":Gtags -f ", { desc = "list objects in the file" } },
+			{ "<C-g>", ":Gtags -g ", { desc = "grep " } },
 			{ "<Tab><Tab>", ":cclose<CR>", { desc = "close quickfix" } },
 			{ "<leader><Tab>", ":copen<CR>", { desc = "open quickfix" } },
-			{ "<leader>n", ":cn<CR>", { desc = "quickfix next" } },
-			{ "<leader>p", ":cp<CR>", { desc = "quickfix previous" } },
+			{ "<C-n>", ":cn<CR>", { desc = "quickfix next" } },
+			{ "<C-p>", ":cp<CR>", { desc = "quickfix previous" } },
 		},
 		config = function()
 			-- use a some pacage as requirement for tagbar for setup (choosing aerial)
@@ -226,7 +226,8 @@ require("lazy").setup({
 	},
 	{ -- Useful plugin to show you pending keybinds.
 		"folke/which-key.nvim",
-		event = "VimEnter", -- Sets the loading event to 'VimEnter'
+		-- event = "VimEnter", -- Sets the loading event to 'VimEnter'
+		event = "VeryLazy",
 		config = function() -- This is the function that runs, AFTER loading
 			require("which-key").setup()
 			-- Document existing key chains
