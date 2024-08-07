@@ -188,7 +188,7 @@ require("lazy").setup({
 		cmd = { "Gtags" },
 		keys = {
 			{ "<C-c>", ":GtagsCursor<CR>", { desc = "Gtag Cursor definition or reference" } },
-			{ "<C-r>", ":Gtags -r ", { desc = "Go to reference point " } },
+			{ "<C-R>", ":Gtags -r ", { desc = "Go to reference point " } },
 			{ "<C-s>", ":Gtags -s ", { desc = "Go to any symbol not defined in GTAGS" } },
 			{ "<C-f>", ":Gtags -f ", { desc = "list objects in the file" } },
 			{ "<C-g>", ":Gtags -g ", { desc = "grep " } },
