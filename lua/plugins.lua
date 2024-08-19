@@ -803,6 +803,8 @@ require("lazy").setup({
 	require("custom.colorschemes"), --
 	require("custom.rust_plugins"), --
 	require("custom.bufferline"), -- bufferline
+	require("custom.markdown_preview"), -- view markdown in browser use toggle key <leder>mp
+	require("custom.nvim-comment"), -- comment and uncomment with keybinging  with gc ...
 
 	--	require("custom.rustaceanvim"), -- adds rustaceanvim [rust-tools: is not maintained anymore]
 	ui = {

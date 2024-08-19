@@ -35,3 +35,5 @@ end, { desc = "Trouble lsp references" })
 vim.keymap.set("n", "[b", ":bn<cr>") -- focus to next buffer
 vim.keymap.set("n", "[p", ":bp<cr>") -- focus previous buffer
 vim.keymap.set("n", "[x", ":bd<cr>") -- close the active buffer- end, {}) -- etc
+-- markdown preview
+vim.keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle<cr>")
