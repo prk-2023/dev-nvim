@@ -802,6 +802,7 @@ require("lazy").setup({
 	require("custom.lazygit"), -- add lazygit
 	require("custom.colorschemes"), --
 	require("custom.rust_plugins"), --
+	require("custom.bufferline"), -- bufferline
 
 	--	require("custom.rustaceanvim"), -- adds rustaceanvim [rust-tools: is not maintained anymore]
 	ui = {

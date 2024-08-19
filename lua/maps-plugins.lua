@@ -31,4 +31,7 @@ end, { desc = "Trouble lsp references" })
 -- end, {}) -- etc
 -- vim.keymap.set("n", "<leader><down>", function()
 -- 	f.move("down")
--- end, {}) -- etc
+--- bufferline :
+vim.keymap.set("n", "[b", ":bn<cr>") -- focus to next buffer
+vim.keymap.set("n", "[p", ":bp<cr>") -- focus previous buffer
+vim.keymap.set("n", "[x", ":bd<cr>") -- close the active buffer- end, {}) -- etc
