@@ -187,15 +187,15 @@ require("lazy").setup({
 		event = {},
 		cmd = { "Gtags" },
 		keys = {
-			{ "<C-c>", ":GtagsCursor<CR>", { desc = "Gtag Cursor definition or reference" } },
-			{ "<C-R>", ":Gtags -r ", { desc = "Go to reference point " } },
-			{ "<C-s>", ":Gtags -s ", { desc = "Go to any symbol not defined in GTAGS" } },
-			{ "<C-f>", ":Gtags -f ", { desc = "list objects in the file" } },
-			{ "<C-g>", ":Gtags -g ", { desc = "grep " } },
+			{ "<leader>c", ":GtagsCursor<CR>", { desc = "Gtag Cursor definition or reference" } },
+			{ "<leader>R", ":Gtags -r ", { desc = "Go to reference point " } },
+			{ "<leader>s", ":Gtags -s ", { desc = "Go to any symbol not defined in GTAGS" } },
+			{ "<leader>f", ":Gtags -f ", { desc = "list objects in the file" } },
+			{ "<leader>g", ":Gtags -g ", { desc = "grep " } },
 			{ "<Tab><Tab>", ":cclose<CR>", { desc = "close quickfix" } },
 			{ "<leader><Tab>", ":copen<CR>", { desc = "open quickfix" } },
-			{ "<C-n>", ":cn<CR>", { desc = "quickfix next" } },
-			{ "<C-p>", ":cp<CR>", { desc = "quickfix previous" } },
+			{ "<leader>n", ":cn<CR>", { desc = "quickfix next" } },
+			{ "<leader>p", ":cp<CR>", { desc = "quickfix previous" } },
 		},
 		config = function()
 			-- use a some pacage as requirement for tagbar for setup (choosing aerial)
