@@ -1,3 +1,6 @@
+-- Set default colorscheme
+vim.cmd.colorscheme("gruvbox-high-contrast")
+
 -- vim.keymap.set("n", "<F7>", "<cmd>ToggleTerm<cr>", { desc = "toggle terminal from" })
 -- Trouble keymaps
 vim.keymap.set("n", "<leader>xx", function()

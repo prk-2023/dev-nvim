@@ -28,8 +28,8 @@ require("lazy").setup({
 			-- vim.cmd([[colorscheme kanagawa-wave]])
 			-- vim.cmd.colorscheme("kanagawa-dragon")
 			--vim.cmd.colorscheme("kanagawa-wave")
-			vim.cmd.colorscheme("gruvbox")
-			--vim.cmd.colorscheme("gruvbox-high-contrast")
+			-- vim.cmd.colorscheme("gruvbox")
+			-- vim.cmd.colorscheme("gruvbox-high-contrast")
 		end,
 	},
 	{ -- gruvbox colorscheme
