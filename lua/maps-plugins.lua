@@ -43,3 +43,9 @@ vim.keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle<cr>")
 
 -- Stop LSP  messages
 vim.keymap.set("n", "<leader>F2", ":LspStop")
+
+-- Treesitter code fold/unfold..
+-- use the keymaps for fold/unflod/toggle fold at center using "zR", "zM", "za"
+vim.wo.foldmethod = "expr"
+vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldenable = false -- disable fold on open as default

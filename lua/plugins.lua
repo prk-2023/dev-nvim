@@ -107,6 +107,7 @@ require("lazy").setup({
 				"vim",
 				"make",
 				"rust",
+				"toml",
 				"python",
 			},
 			cmd = {
@@ -132,8 +133,14 @@ require("lazy").setup({
 				-- If you are experiencing weird indenting issues, add the language to
 				-- the list of additional_vim_regex_highlighting and disabled languages for indent.
 				additional_vim_regex_highlighting = { "ruby" },
+				additional_vim_regex_highlighting = false,
 			},
 			indent = { enable = true, disable = { "ruby" } },
+			rainbow = {
+				enable = true,
+				extended_mode = true,
+				max_file_lines = nil,
+			},
 		},
 
 		config = function(_, opts)
@@ -498,27 +505,27 @@ require("lazy").setup({
 				clangd = {},
 				-- gopls = {},
 				pyright = {},
-				rust_analyzer = {
-					on_attach = on_attach,
-					settings = {
-						["rust-analyzer"] = {
-							imports = {
-								granularity = {
-									group = "module",
-								},
-								prefix = "self",
-							},
-							cargo = {
-								buildScripts = {
-									enable = true,
-								},
-							},
-							procMacro = {
-								enable = true,
-							},
-						},
-					},
-				},
+				-- rust_analyzer = {
+				-- 	on_attach = on_attach,
+				-- 	settings = {
+				-- 		["rust-analyzer"] = {
+				-- 			imports = {
+				-- 				granularity = {
+				-- 					group = "module",
+				-- 				},
+				-- 				prefix = "self",
+				-- 			},
+				-- 			cargo = {
+				-- 				buildScripts = {
+				-- 					enable = true,
+				-- 				},
+				-- 			},
+				-- 			procMacro = {
+				-- 				enable = true,
+				-- 			},
+				-- 		},
+				-- 	},
+				-- },
 				-- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
 				--
 				-- Some languages (like typescript) have entire language plugins that can be useful:
@@ -807,7 +814,7 @@ require("lazy").setup({
 	require("custom.markdown_preview"), -- view markdown in browser use toggle key <leder>mp
 	require("custom.nvim-comment"), -- comment and uncomment with keybinging  with gc ...
 
-	--	require("custom.rustaceanvim"), -- adds rustaceanvim [rust-tools: is not maintained anymore]
+	require("custom.rustaceanvim"), -- adds rustaceanvim [rust-tools: is not maintained anymore]
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
 		-- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
