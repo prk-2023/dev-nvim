@@ -802,6 +802,7 @@ require("lazy").setup({
 	require("custom.lazygit"), -- add lazygit
 	require("custom.colorschemes"), --
 	require("custom.rust_plugins"), --
+	require("custom.rust_crates"), --
 	require("custom.bufferline"), -- bufferline
 	require("custom.markdown_preview"), -- view markdown in browser use toggle key <leder>mp
 	require("custom.nvim-comment"), -- comment and uncomment with keybinging  with gc ...
