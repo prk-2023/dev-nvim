@@ -1,4 +1,11 @@
 return {
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+	{ "cpea2506/one_monokai.nvim" },
 	{ "Almo7aya/neogruvbox.nvim" },
 	{ "iibe/gruvbox-high-contrast" },
 	{ "daschw/leaf.nvim" },
@@ -137,5 +144,26 @@ return {
 			-- Enables dark background for treesitter-context window
 			dark_background = true,
 		},
+	},
+	{
+		"navarasu/onedark.nvim",
+		style = cool, --dark, darker, cool, deep, warm, warmer, light
+		code_style = {
+			comments = "italic",
+			keywords = "none",
+			functions = "none",
+			strings = "none",
+			variables = "none",
+		},
+		-- colors = {
+		-- 	bright_orange = "#ff8800", -- define a new color
+		-- 	green = "#00ffaa", -- redefine an existing color
+		-- },
+		-- highlights = {
+		-- 	["@keyword"] = { fg = "$green" },
+		-- 	["@string"] = { fg = "$bright_orange", bg = "#00ff00", fmt = "bold" },
+		-- 	["@function"] = { fg = "#0000ff", sp = "$cyan", fmt = "underline,italic" },
+		-- 	["@function.builtin"] = { fg = "#0059ff" },
+		-- },
 	},
 }
