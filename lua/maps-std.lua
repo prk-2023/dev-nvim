@@ -35,4 +35,4 @@ vim.keymap.set("n", "<M-t>", "<C-W>+", { desc = "horizontal split: taller " })
 vim.keymap.set("n", "<M-s>", "<C-W>-", { desc = "horizontal split: shorter" })
 
 -- line wrap the file to the text width (108 from options.lua)
-vim.keymap.set("n", "<leader>lw", ":gqG<cr>", { desc = "line wrap the entire file to textwidth" })
+vim.keymap.set("n", "<leader>lw", "%normal gggqG<cr>", { desc = "line wrap the entire file to textwidth" })
