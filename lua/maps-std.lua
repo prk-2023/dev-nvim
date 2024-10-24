@@ -24,6 +24,7 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 vim.keymap.set("n", "<leader>aa", ":set mouse=a<cr>", { desc = "enable mouse" })
 vim.keymap.set("n", "<leader>ad", ":set mouse-=a<cr>", { desc = "disable mouse" })
 
+-- force save and quit
 vim.keymap.set("n", "<C-q>", ":q!<cr>", { desc = "Force Quit" })
 vim.keymap.set("n", "<C-s>", ":w!<cr>", { desc = "Force write" })
 
@@ -32,3 +33,6 @@ vim.keymap.set("n", "<M-,>", "<c-w>3<", { desc = "vertically shrink current spli
 vim.keymap.set("n", "<M-.>", "<c-w>3>", { desc = "vertically expand current split by 3%" })
 vim.keymap.set("n", "<M-t>", "<C-W>+", { desc = "horizontal split: taller " })
 vim.keymap.set("n", "<M-s>", "<C-W>-", { desc = "horizontal split: shorter" })
+
+-- line wrap the file to the text width (108 from options.lua)
+vim.keymap.set("n", "<leader>lw", ":gqG<cr>", { desc = "line wrap the entire file to textwidth" })
