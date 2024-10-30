@@ -193,16 +193,16 @@ require("lazy").setup({
 		opts = {},
 		event = {},
 		cmd = { "Gtags" },
-		keys = {
-			{ "<leader>c", ":GtagsCursor<CR>", { desc = "Gtag Cursor definition or reference" } },
-			{ "<leader>R", ":Gtags -r ", { desc = "Go to reference point " } },
-			{ "<leader>s", ":Gtags -s ", { desc = "Go to any symbol not defined in GTAGS" } },
-			{ "<leader>f", ":Gtags -f ", { desc = "list objects in the file" } },
-			{ "<leader>g", ":Gtags -g ", { desc = "grep " } },
+		keys = { -- USE ALT + key to avoid conflict with redo C-r
+			{ "<M-c>", ":GtagsCursor<CR>", { desc = "Gtag Cursor definition or reference" } },
+			{ "<M-r>", ":Gtags -r ", { desc = "Go to reference point " } },
+			{ "<M-s>", ":Gtags -s ", { desc = "Go to any symbol not defined in GTAGS" } },
+			{ "<M-f>", ":Gtags -f ", { desc = "list objects in the file" } },
+			{ "<M-g>", ":Gtags -g ", { desc = "grep " } },
 			{ "<Tab><Tab>", ":cclose<CR>", { desc = "close quickfix" } },
 			{ "<leader><Tab>", ":copen<CR>", { desc = "open quickfix" } },
-			{ "<leader>n", ":cn<CR>", { desc = "quickfix next" } },
-			{ "<leader>p", ":cp<CR>", { desc = "quickfix previous" } },
+			{ "<M-n>", ":cn<CR>", { desc = "quickfix next" } },
+			{ "<M-p>", ":cp<CR>", { desc = "quickfix previous" } },
 		},
 		config = function()
 			-- use a some pacage as requirement for tagbar for setup (choosing aerial)
@@ -576,6 +576,7 @@ require("lazy").setup({
 						server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
 						require("lspconfig")[server_name].setup(server)
 					end,
+					rust_analyzer = function() end,
 				},
 			})
 		end,
