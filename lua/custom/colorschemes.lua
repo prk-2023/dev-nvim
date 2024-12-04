@@ -166,4 +166,5 @@ return {
 		-- 	["@function.builtin"] = { fg = "#0059ff" },
 		-- },
 	},
+	{ { "phha/zenburn.nvim" } },
 }

@@ -201,6 +201,7 @@ require("lazy").setup({
 			{ "<leader>g", ":Gtags -g ", { desc = "grep " } },
 			{ "<Tab><Tab>", ":cclose<CR>", { desc = "close quickfix" } },
 			{ "<leader><Tab>", ":copen<CR>", { desc = "open quickfix" } },
+			-- { "<Tab>", ":lua require('maps-plugins').toggle_quickfix()<CR>", { desc = "toggle quickfix" } },
 			{ "<leader>n", ":cn<CR>", { desc = "quickfix next" } },
 			{ "<leader>p", ":cp<CR>", { desc = "quickfix previous" } },
 		},
@@ -761,6 +762,36 @@ require("lazy").setup({
 			--  Check out: https://github.com/echasnovski/mini.nvim
 		end,
 	},
+	{ -- https://www.reddit.com/r/neovim/comments/154mtsw/lsp_using_cmake_compile_commandsjson/
+		"p00f/clangd_extensions.nvim",
+		lazy = true,
+		config = function() end,
+		opts = {
+			inlay_hints = {
+				inline = false,
+			},
+			ast = {
+				--These require codicons (https://github.com/microsoft/vscode-codicons)
+				role_icons = {
+					type = "",
+					declaration = "",
+					expression = "",
+					specifier = "",
+					statement = "",
+					["template argument"] = "",
+				},
+				kind_icons = {
+					Compound = "",
+					Recovery = "",
+					TranslationUnit = "",
+					PackExpansion = "",
+					TemplateTypeParm = "",
+					TemplateTemplateParm = "",
+					TemplateParamObject = "",
+				},
+			},
+		},
+	},
 	--{ -- neotree
 	--"nvim-neo-tree/neo-tree.nvim",
 	--branch = "v3.x",
@@ -816,6 +847,7 @@ require("lazy").setup({
 	require("custom.nvim-comment"), -- comment and uncomment with keybinging  with gc ...
 
 	require("custom.rustaceanvim"), -- adds rustaceanvim [rust-tools: is not maintained anymore]
+	require("custom.cmake-tools"), -- cmake tools
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
 		-- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table

@@ -49,3 +49,15 @@ vim.keymap.set("n", "<leader>F2", ":LspStop")
 vim.wo.foldmethod = "expr"
 vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldenable = false -- disable fold on open as default
+
+-- local M = {}
+--
+-- function M.toggle_quickfix()
+-- 	if vim.fn.getqflist({ title = 0 }).title == "" then
+-- 		vim.cmd("copen")
+-- 	else
+-- 		vim.cmd("cclose")
+-- 	end
+-- end
+--
+-- return M
