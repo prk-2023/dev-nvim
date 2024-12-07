@@ -847,6 +847,7 @@ require("lazy").setup({
 	require("custom.nvim-comment"), -- comment and uncomment with keybinging  with gc ...
 
 	require("custom.rustaceanvim"), -- adds rustaceanvim [rust-tools: is not maintained anymore]
+	require("custom.ferris"), -- adds rustaceanvim [rust-tools: is not maintained anymore]
 	require("custom.cmake-tools"), -- cmake tools
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
