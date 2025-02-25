@@ -141,6 +141,16 @@ require("lazy").setup({
 				extended_mode = true,
 				max_file_lines = nil,
 			},
+			-- for the folding enabled in maps-plugins
+			highlight = {
+				enable = true,
+			},
+			indent = {
+				enable = true,
+			},
+			foldexpr = {
+				enable = true,
+			},
 		},
 
 		config = function(_, opts)

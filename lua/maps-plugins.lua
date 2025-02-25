@@ -42,13 +42,30 @@ vim.keymap.set("n", "[x", ":bd<cr>") -- close the active buffer- end, {}) -- etc
 vim.keymap.set("n", "<leader>mp", ":MarkdownPreviewToggle<cr>")
 
 -- Stop LSP  messages
-vim.keymap.set("n", "<leader>F2", ":LspStop")
+vim.keymap.set("n", "<leader><F2>", ":LspStop")
 
 -- Treesitter code fold/unfold..
 -- use the keymaps for fold/unflod/toggle fold at center using "zR", "zM", "za"
-vim.wo.foldmethod = "expr"
+---  foldmethod=indent : fold based on indentation
+---  foldmethod=syntax : fold based on syntax highlighting
+---  foldmethod=manual : fold manually using 'zf' command
+vim.wo.foldmethod = "manual"
 vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
 vim.opt.foldenable = false -- disable fold on open as default
+-- vim.api.nvim_set_keymap("n", "zf", ":lua vim.treesitter.fold() <CR>", { noremap = true })
+-- When you use folding commands, Neovim creates a "fold context" that affects the behavior
+-- of certain commands, including visual mode.
+-- In some cases, this fold context can become "stuck" and prevent visual mode from working correctly.
+-- reset the fold context every time you enter a new buffer
+vim.api.nvim_create_autocmd("BufEnter", {
+	pattern = "*",
+	callback = function()
+		vim.opt.foldenable = false
+		vim.opt.foldenable = true
+	end,
+})
+-- folding with visual
+-- visual select the number of lines and press 'zf' to create the folds
 
 -- local M = {}
 --

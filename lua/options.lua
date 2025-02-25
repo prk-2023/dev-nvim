@@ -17,6 +17,8 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.mouse = "a"
+-- use auto spell correction with "z="
+vim.opt.spell = true
 -- Synchronized the system clipboard with NeoVim's clipboard.
 vim.opt.clipboard = "unnamedplus" -- install the "xsel" or "xclip" on the pc
 ---vim.api.nvim_set_option("clipboard", "unnamedplus") //old way
