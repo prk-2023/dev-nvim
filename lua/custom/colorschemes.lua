@@ -10,6 +10,7 @@ return {
 	{ "iibe/gruvbox-high-contrast" },
 	{ "daschw/leaf.nvim" },
 	{ "jacoborus/tender.vim" },
+	{ "bhrown/brown.vim" },
 	{ "sho-87/kanagawa-paper.nvim", lazy = false, priority = 1000, opts = {} },
 	{
 		"oxfist/night-owl.nvim",
