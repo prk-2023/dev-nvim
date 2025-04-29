@@ -859,6 +859,7 @@ require("lazy").setup({
 	require("custom.rustaceanvim"), -- adds rustaceanvim [rust-tools: is not maintained anymore]
 	require("custom.ferris"), -- adds rustaceanvim [rust-tools: is not maintained anymore]
 	require("custom.cmake-tools"), -- cmake tools
+	require("custom.typst-preview"), -- cmake tools
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
 		-- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
