@@ -109,6 +109,7 @@ require("lazy").setup({
 				"rust",
 				"toml",
 				"python",
+				"tinymist", -- typst ( Integrated LSP for Typst )
 			},
 			cmd = {
 				"TSBufDisable",
