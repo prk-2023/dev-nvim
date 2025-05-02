@@ -50,8 +50,8 @@ require("lazy").setup({
 			vim.g.gruvbox_baby_highlights = { Normal = { fg = "#123123", bg = "NONE", style = "underline" } }
 		end,
 	},
+	{ "tjdevries/colorbuddy.nvim" },
 	{
-		"tjdevries/colorbuddy.nvim",
 		"tjdevries/gruvbuddy.nvim",
 		config = function()
 			vim.g.gruvbox_keyword_style = "italic"
@@ -109,7 +109,7 @@ require("lazy").setup({
 				"rust",
 				"toml",
 				"python",
-				"tinymist", -- typst ( Integrated LSP for Typst )
+				"typst",
 			},
 			cmd = {
 				"TSBufDisable",
@@ -133,10 +133,10 @@ require("lazy").setup({
 				-- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
 				-- If you are experiencing weird indenting issues, add the language to
 				-- the list of additional_vim_regex_highlighting and disabled languages for indent.
-				additional_vim_regex_highlighting = { "ruby" },
+				-- additional_vim_regex_highlighting = { "ruby" },
 				additional_vim_regex_highlighting = false,
 			},
-			indent = { enable = true, disable = { "ruby" } },
+			-- indent = { enable = true, disable = { "ruby" } },
 			rainbow = {
 				enable = true,
 				extended_mode = true,
@@ -149,9 +149,9 @@ require("lazy").setup({
 			indent = {
 				enable = true,
 			},
-			foldexpr = {
-				enable = true,
-			},
+			-- foldexpr = {
+			-- 	enable = true,
+			-- },
 		},
 
 		config = function(_, opts)
@@ -374,7 +374,15 @@ require("lazy").setup({
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			-- Automatically install LSPs and related tools to stdpath for Neovim
-			{ "williamboman/mason.nvim", config = true }, -- NOTE: Must be loaded before dependants
+			{
+				"williamboman/mason.nvim",
+				config = true,
+				-- opts = {
+				-- 	ensure_installed = {
+				-- 		"tinymist",
+				-- 	},
+				-- },
+			}, -- NOTE: Must be loaded before dependants
 			"williamboman/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 
@@ -726,11 +734,11 @@ require("lazy").setup({
 				}),
 				-- formatting = { fields = { "kind", "abbr", "menu" }, format = lspkind_status_ok  },
 				duplicates = { nvim_lsp = 1, luasnip = 1, cmp_tabnine = 1, buffer = 1, path = 1 },
-				snippet = {
-					expand = function(args)
-						Luasnip.expand(args.body)
-					end,
-				},
+				-- snippet = {
+				-- 	expand = function(args)
+				-- 		Luasnip.expand(args.body)
+				-- 	end,
+				-- },
 				sources = {
 					{ name = "nvim_lsp", priority = 1000 },
 					{ name = "luasnip", priority = 750 },
@@ -861,6 +869,7 @@ require("lazy").setup({
 	require("custom.ferris"), -- adds rustaceanvim [rust-tools: is not maintained anymore]
 	require("custom.cmake-tools"), -- cmake tools
 	require("custom.typst-preview"), -- cmake tools
+	--	require("custom.typst"), -- cmake tools
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
 		-- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table

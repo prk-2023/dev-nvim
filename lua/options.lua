@@ -78,4 +78,7 @@ vim.opt.hlsearch = true
 vim.opt.colorcolumn = "108"
 vim.opt.textwidth = 108
 vim.opt.wrap = true
+
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 ----------------------------------------------------------------------------------------------
