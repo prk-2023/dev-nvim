@@ -379,7 +379,7 @@ require("lazy").setup({
 				config = true,
 				-- opts = {
 				-- 	ensure_installed = {
-				-- 		"tinymist",
+				-- 		"tinymist","typstfmt"
 				-- 	},
 				-- },
 			}, -- NOTE: Must be loaded before dependants
@@ -571,6 +571,7 @@ require("lazy").setup({
 				cpptools = {},
 				--luaformatter = {},
 				codelldb = {},
+				tinymist = {},
 			}
 			-- Ensure the servers and tools above are installed
 			--  To check the current status of installed tools and/or manually install
