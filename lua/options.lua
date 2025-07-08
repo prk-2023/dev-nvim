@@ -82,3 +82,20 @@ vim.opt.wrap = true
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 ----------------------------------------------------------------------------------------------
+-- 'g' is used as a prefix for various LSP keybindings (like 'gd', 'gi', etc.),
+-- so we avoid remapping 'gX'. Instead, we use 'ggX' as a custom keybinding
+-- to open the URL under the cursor in the default browser.
+-- Function to open URL under cursor
+local function open_url_under_cursor()
+	local url = vim.fn.expand("<cfile>")
+	if url:match("^https?://") then
+		vim.fn.jobstart({ "xdg-open", url }, { detach = true }) -- Linux
+	-- For macOS, use: 'open'
+	-- For Windows (WSL), use: 'cmd.exe', '/c', 'start', url
+	else
+		print("No valid URL under cursor")
+	end
+end
+
+-- Map 'ggX' in normal mode
+vim.keymap.set("n", "ggX", open_url_under_cursor, { desc = "Open URL under cursor" })
