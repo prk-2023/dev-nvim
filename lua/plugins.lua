@@ -38,6 +38,8 @@ require("lazy").setup({
 		-- config = true,
 		config = function()
 			vim.g.gruvbox_keyword_style = "italic"
+			vim.cmd.colorscheme("gruvbox")
+			--- vim.g.gruvbox_highlights = { Normal = { fg = "#123123", bg = "NONE", style = "underline" } }
 		end,
 	},
 	{ -- color scheme

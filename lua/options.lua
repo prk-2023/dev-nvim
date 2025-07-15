@@ -99,6 +99,3 @@ end
 
 -- Map 'ggX' in normal mode
 vim.keymap.set("n", "ggX", open_url_under_cursor, { desc = "Open URL under cursor" })
-
--- color schemes:
-vim.cmd.colorscheme("minisummer")
