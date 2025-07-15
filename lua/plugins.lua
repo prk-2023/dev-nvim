@@ -38,8 +38,6 @@ require("lazy").setup({
 		-- config = true,
 		config = function()
 			vim.g.gruvbox_keyword_style = "italic"
-			vim.cmd.colorscheme("gruvbox")
-			--- vim.g.gruvbox_highlights = { Normal = { fg = "#123123", bg = "NONE", style = "underline" } }
 		end,
 	},
 	{ -- color scheme
@@ -384,7 +382,8 @@ require("lazy").setup({
 				-- 	},
 				-- },
 			}, -- NOTE: Must be loaded before dependants
-			"williamboman/mason-lspconfig.nvim",
+			-- "williamboman/mason-lspconfig.nvim",
+			"mason-org/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 
 			-- Useful status updates for LSP.
