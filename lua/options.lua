@@ -77,7 +77,7 @@ vim.opt.hlsearch = true
 -- textwidth marker set to 108 columns
 vim.opt.colorcolumn = "108"
 vim.opt.textwidth = 108
-vim.opt.wrap = true
+vim.opt.wrap = false -- true
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"

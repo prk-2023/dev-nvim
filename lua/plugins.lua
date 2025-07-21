@@ -674,6 +674,7 @@ require("lazy").setup({
 			"hrsh7th/cmp-nvim-lsp",
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-buffer",
+			"saecki/crates.nvim",
 		},
 		config = function()
 			-- See `:help cmp`
@@ -686,7 +687,7 @@ require("lazy").setup({
 						luasnip.lsp_expand(args.body)
 					end,
 				},
-				completion = { completeopt = "menu,menuone,noinsert" },
+				----	completion = { completeopt = "menu,menuone,noinsert" },
 				-- For an understanding of why these mappings were
 				-- chosen, you will need to read `:help ins-completion`
 				--
@@ -745,6 +746,7 @@ require("lazy").setup({
 					{ name = "luasnip", priority = 750 },
 					{ name = "buffer", priority = 500 },
 					{ name = "path", priority = 250 },
+					{ name = "crates" },
 				},
 			})
 		end,
