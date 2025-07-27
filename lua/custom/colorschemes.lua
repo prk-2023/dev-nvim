@@ -168,4 +168,36 @@ return {
 		-- },
 	},
 	{ { "phha/zenburn.nvim" } },
+	{
+		"vague2k/vague.nvim",
+		config = function()
+			-- NOTE: you do not need to call setup if you don't want to.
+			require("vague").setup({
+				-- optional configuration here
+				plugins = {
+					cmp = {
+						match = "bold",
+						match_fuzzy = "bold",
+					},
+					dashboard = {
+						footer = "italic",
+					},
+					lsp = {
+						diagnostic_error = "bold",
+						diagnostic_hint = "none",
+						diagnostic_info = "italic",
+						diagnostic_ok = "none",
+						diagnostic_warn = "bold",
+					},
+					neotest = {
+						focused = "bold",
+						adapter_name = "bold",
+					},
+					telescope = {
+						match = "bold",
+					},
+				},
+			})
+		end,
+	},
 }

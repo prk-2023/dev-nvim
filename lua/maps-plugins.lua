@@ -78,3 +78,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 -- end
 --
 -- return M
+vim.keymap.set("n", "<leader>tp", ":TypstPreviewToggle<cr>")
+-- move colorscheme from plugins to map-plugins
+-- vim.cmd.colorscheme("gruvbox")
+vim.cmd.colorscheme("vague")
