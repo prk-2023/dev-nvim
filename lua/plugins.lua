@@ -851,6 +851,7 @@ require("lazy").setup({
 	--  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
 	--    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
 	-- { import = 'custom.plugins' },
+	require("custom.blink-cmp"),
 	require("custom.autopairs"),
 	require("custom.gitsigns"), -- adds gitsigns recommend keymaps
 	require("custom.lint"), --
@@ -872,6 +873,7 @@ require("lazy").setup({
 	require("custom.ferris"), -- adds rustaceanvim [rust-tools: is not maintained anymore]
 	require("custom.cmake-tools"), -- cmake tools
 	require("custom.typst-preview"), -- cmake tools
+	require("custom.noise"),
 	--	require("custom.typst"), -- cmake tools
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
