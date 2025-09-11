@@ -110,6 +110,7 @@ require("lazy").setup({
 				"toml",
 				"python",
 				"typst",
+				"regex",
 			},
 			cmd = {
 				"TSBufDisable",
@@ -880,7 +881,7 @@ require("lazy").setup({
 	require("custom.ferris"), -- adds rustaceanvim [rust-tools: is not maintained anymore]
 	require("custom.cmake-tools"), -- cmake tools
 	require("custom.typst-preview"), -- cmake tools
-	require("custom.noise"),
+	require("custom.noice"),
 	--	require("custom.typst"), -- cmake tools
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
