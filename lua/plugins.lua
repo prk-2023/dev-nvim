@@ -95,6 +95,7 @@ require("lazy").setup({
 	{ -- Highlight, edit, and navigate code
 		"nvim-treesitter/nvim-treesitter",
 		"tree-sitter-grammars/tree-sitter-markdown",
+    "nvim-treesitter/playground",
 		build = ":TSUpdate",
 		opts = {
 			ensure_installed = {
@@ -103,6 +104,7 @@ require("lazy").setup({
 				"html",
 				"lua",
 				"luadoc",
+        "markdown",
 				"markdown_inline",
 				"vim",
 				"make",
@@ -111,6 +113,7 @@ require("lazy").setup({
 				"python",
 				"typst",
 				"regex",
+        "query",
 			},
 			cmd = {
 				"TSBufDisable",
@@ -135,6 +138,7 @@ require("lazy").setup({
 				-- If you are experiencing weird indenting issues, add the language to
 				-- the list of additional_vim_regex_highlighting and disabled languages for indent.
 				-- additional_vim_regex_highlighting = { "ruby" },
+				-- additional_vim_regex_highlighting = { "markdown" },
 				additional_vim_regex_highlighting = false,
 			},
 			-- indent = { enable = true, disable = { "ruby" } },
@@ -142,10 +146,6 @@ require("lazy").setup({
 				enable = true,
 				extended_mode = true,
 				max_file_lines = nil,
-			},
-			-- for the folding enabled in maps-plugins
-			highlight = {
-				enable = true,
 			},
 			indent = {
 				enable = true,
@@ -281,7 +281,7 @@ require("lazy").setup({
 		event = "VimEnter",
 		branch = "0.1.x",
 		dependencies = {
-			"nvim-lua/plenary.nvim",
+			-- "nvim-lua/plenary.nvim", -- commented to remove duplicates
 			{ -- If encountering errors, see telescope-fzf-native README for installation instructions
 				"nvim-telescope/telescope-fzf-native.nvim",
 				-- `build` is used to run some command when the plugin is installed/updated.
@@ -295,7 +295,7 @@ require("lazy").setup({
 			},
 			{ "nvim-telescope/telescope-ui-select.nvim" },
 			-- Useful for getting pretty icons, but requires a Nerd Font.
-			{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
+			--			{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font }, // duplicate
 		},
 		config = function()
 			-- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -612,7 +612,7 @@ require("lazy").setup({
 	},
 	{ -- Autoformat
 		"stevearc/conform.nvim",
-		lazy = false,
+		lazy = true, --false, // make it lazy-loading
 		keys = {
 			{
 				"<leader>f",
@@ -795,7 +795,7 @@ require("lazy").setup({
 	{ -- https://www.reddit.com/r/neovim/comments/154mtsw/lsp_using_cmake_compile_commandsjson/
 		"p00f/clangd_extensions.nvim",
 		lazy = true,
-		config = function() end,
+		--		config = function() end, // unnecessary as we have lazy
 		opts = {
 			inlay_hints = {
 				inline = false,
