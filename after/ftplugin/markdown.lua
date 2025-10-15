@@ -23,13 +23,13 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 -- Example: override markdown code block highlight group colors locally
-vim.api.nvim_set_hl(0, "MarkdownBold", { fg = "#FFFF00", bold = true })
-vim.api.nvim_set_hl(0, "MarkdownBoldItalic", { fg = "#FFA500", bold = true })
-vim.api.nvim_set_hl(0, "MarkdownItalic", { fg = "#00FF00", bold = false })
-vim.api.nvim_set_hl(0, "MarkdownH1", { fg = "#008B8B", bold = true })
-vim.api.nvim_set_hl(0, "MarkdownH1", { fg = "#00FFFF", bold = true })
-vim.api.nvim_set_hl(0, "MarkdownH1", { fg = "#00FFFF", bold = true })
-vim.api.nvim_set_hl(0, "MarkdownH1", { fg = "#00FFFF", bold = true })
+-- vim.api.nvim_set_hl(0, "MarkdownBold", { fg = "#FFFF00", bold = true })
+-- vim.api.nvim_set_hl(0, "MarkdownBoldItalic", { fg = "#FFA500", bold = true })
+-- vim.api.nvim_set_hl(0, "MarkdownItalic", { fg = "#00FF00", bold = false })
+-- vim.api.nvim_set_hl(0, "MarkdownH1", { fg = "#008B8B", bold = true })
+-- vim.api.nvim_set_hl(0, "MarkdownH2", { fg = "#00FFFF", bold = true })
+-- vim.api.nvim_set_hl(0, "MarkdownH3", { fg = "#00FFFF", bold = true })
+-- vim.api.nvim_set_hl(0, "MarkdownH4", { fg = "#00FFFF", bold = true })
 -- #FF69B4  Pink 
 --
 
