@@ -4,7 +4,41 @@ return -- lazy.nvim
 	event = "VeryLazy",
 	opts = {
 		-- add any options here
-	},
+		cmdline = {
+			format = {
+				cmdline = { icon = ":" }, -- replaces [ > ] with [ : ]
+				search_down = { icon = "/" }, -- optional: for `/` search
+				search_up = { icon = "?" }, -- optional: for `?` search
+			},
+		},
+        views = {
+            cmdline_popup = {
+                position = {
+                    row = 1,
+                    col = "50%", -- Can be number or string like "50%"
+                },
+                size = {
+                    width = 60,
+                    height = "auto",
+                },
+            },
+        },
+    },
+	    lsp = {
+        override = {
+            ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+            ["vim.lsp.util.stylize_markdown"] = true,
+        },
+    },
+    popupmenu = {
+        enabled = false, --true, -- enables the Noice popupmenu UI
+        ---@type 'nui'|'cmp'
+        backend = "nui", -- backend to use to show regular cmdline completions
+        ---@type NoicePopupmenuItemKind|false
+        -- Icons for completion item kinds (see defaults at noice.config.icons.kinds)
+        kind_icons = {}, -- set to `false` to disable icons
+      },
+
 	dependencies = {
 		-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
 		"MunifTanjim/nui.nvim",
