@@ -722,7 +722,8 @@ require("lazy").setup({
             elseif luasnip.expand_or_jumpable() then
               luasnip.expand_or_jump()
             else
-              fallback()
+              -- fallback()   --- hack as this breaks with markdown files mapping <Tab> in insertmode.
+              vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("\t", true, true, true), "n", true)
             end 
             end , {"i", "s"}
             ), 
