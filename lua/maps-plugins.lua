@@ -1,5 +1,5 @@
 -- Set default colorscheme
-vim.cmd.colorscheme("gruvbox-high-contrast")
+vim.cmd.colorscheme("tokyonight-moon")
 
 -- vim.keymap.set("n", "<F7>", "<cmd>ToggleTerm<cr>", { desc = "toggle terminal from" })
 -- Trouble keymaps
@@ -81,4 +81,3 @@ vim.api.nvim_create_autocmd("BufEnter", {
 vim.keymap.set("n", "<leader>tp", ":TypstPreviewToggle<cr>")
 -- move colorscheme from plugins to map-plugins
 -- vim.cmd.colorscheme("gruvbox")
-vim.cmd.colorscheme("vague")

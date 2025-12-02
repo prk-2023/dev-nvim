@@ -99,3 +99,6 @@ end
 
 -- Map 'ggX' in normal mode
 vim.keymap.set("n", "ggX", open_url_under_cursor, { desc = "Open URL under cursor" })
+
+-- Insert a Linebreak at the cursor and return to command mode:
+vim.api.nvim_set_keymap('n', '<leader>o', 'i<CR><Esc>', { noremap = true, silent = true })
