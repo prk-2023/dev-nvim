@@ -169,18 +169,91 @@ require("lazy").setup({
 			--  - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
 		end,
 	},
-	{ -- Aerial: code outliner and quick navigation
-		"stevearc/aerial.nvim",
-		opts = {},
-		-- Optional dependencies
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-			"nvim-tree/nvim-web-devicons",
-		},
-		keys = {
-			{ "<leader><F8>", ":AerialToggle<CR>", { desc = "Toggle Aerial Panel" } },
-		},
-	},
+	-- { -- Aerial: code outliner and quick navigation
+	-- 	"stevearc/aerial.nvim",
+	-- 	opts = {},
+	-- 	-- Optional dependencies
+	-- 	dependencies = {
+	-- 		"nvim-treesitter/nvim-treesitter",
+	-- 		"nvim-tree/nvim-web-devicons",
+	-- 	},
+	-- 	keys = {
+	-- 		{ "<leader><F8>", ":AerialToggle<CR>", { desc = "Toggle Aerial Panel" } },
+	-- 	},
+	-- },
+  { -- Aerial: code outliner and quick navigation
+    "stevearc/aerial.nvim",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons",
+    },
+    keys = {
+      { "<leader><F8>", "<cmd>AerialToggle<CR>", desc = "Toggle Aerial Panel" },
+    },
+    opts = {
+      -- Prefer fast async backends
+      backends = { "treesitter", "lsp", "markdown" },
+      -- Tagbar-style Nerd Font icons 
+      icons = {
+        Array = "",
+        Boolean = "",
+        Class = "ﴯ",
+        Constant = "",
+        Constructor = "",
+        Enum = "",
+        EnumMember = "",
+        Event = "",
+        Field = "", 
+        File = "",
+        Function = "",
+        Interface = "",
+        Key = "",
+        Method = "",
+        Module = "",
+        Namespace = "",
+        Null = "ﳠ",
+        Number = "",
+        Object = "",
+        Operator = "",
+        Package = "",
+        Property = "",
+        String = "",
+        Struct = "פּ",
+        TypeParameter = "",
+        Variable = "",
+      },
+      -- UI tweaks (Tagbar-like feel) 
+      layout = {
+        min_width = 28,
+        max_width = 35,
+      },
+      show_guides = true,
+      highlight_on_hover = true,
+      highlight_on_jump = true,
+      --
+      -- Reduce noise globally (optional but recommended)
+      filter_kind = {
+        "Array",
+        "Boolean",
+        "Class",
+        "Constant",
+        "Constructor",
+        "Enum",
+        "Function",
+        "Interface",
+        "Method",
+        "Module",
+        "Namespace",
+        "Struct",
+        "Variable",
+      },
+      -- Markdown-specific performance tuning
+      markdown = {
+        -- Only show headings (fast & clean)
+        symbols = { "heading" },
+      },
+    },
+  },
 	{ -- Tagbars support -- daybreak
 		"preservim/tagbar",
 		-- "majutsushi/tagbar",
