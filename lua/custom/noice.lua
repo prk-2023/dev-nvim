@@ -14,8 +14,13 @@ return -- lazy.nvim
         views = {
             cmdline_popup = {
                 position = {
-                    row = 1,
-                    col = "50%", -- Can be number or string like "50%"
+                    row = "100%",
+                    col = "100%", -- Can be number or string like "50%"
+                },
+                anchor = SW",
+                offset = {
+                    row = -1, -- move up
+                    col = -2, -- move left
                 },
                 size = {
                     width = 60,
