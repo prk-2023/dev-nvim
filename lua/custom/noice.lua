@@ -17,7 +17,7 @@ return -- lazy.nvim
                     row = "100%",
                     col = "100%", -- Can be number or string like "50%"
                 },
-                anchor = SW",
+                anchor = "SW",
                 offset = {
                     row = -1, -- move up
                     col = -2, -- move left
