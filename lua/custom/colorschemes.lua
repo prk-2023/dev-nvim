@@ -3,7 +3,9 @@ return {
 		"folke/tokyonight.nvim",
 		lazy = false,
 		priority = 1000,
-		opts = {},
+		opts = {
+            transparent = true,
+        },
 	},
 	{ "cpea2506/one_monokai.nvim" },
 	{ "Almo7aya/neogruvbox.nvim" },
@@ -12,17 +14,17 @@ return {
 	{ "jacoborus/tender.vim" },
 	{ "bhrown/brown.vim" },
 	{ "sho-87/kanagawa-paper.nvim", lazy = false, priority = 1000, opts = {} },
-	{
-		"oxfist/night-owl.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {
-			bold = true,
-			italics = true,
-			undeline = true,
-			transparent_background = false,
-		},
-	},
+	-- {
+	-- 	"oxfist/night-owl.nvim",
+	-- 	lazy = false,
+	-- 	priority = 1000,
+	-- 	opts = {
+	-- 		bold = true,
+	-- 		italics = true,
+	-- 		undeline = true,
+	-- 		transparent_background = false,
+	-- 	},
+	-- },
 	{
 		"ribru17/bamboo.nvim",
 		lazy = false,
@@ -90,7 +92,7 @@ return {
 			bold = true,
 			italics = true,
 			underline = true,
-			transparent_background = false,
+			transparent_background = true, -- false,
 		},
 	},
 
@@ -222,7 +224,7 @@ return {
         "loctvl842/monokai-pro.nvim",
         config = function() 
             require('monokai-pro').setup({
-                transparent_background = false,
+                transparent_background = true, -- false,
                 terminal_color = true,
                 devicons = true, -- this highlights `nvim-web-devicons`
                 style = {
@@ -266,4 +268,17 @@ return {
             })
         end
     },
+    {
+    "bignimbus/pop-punk.vim",
+    name = "pop-punk", -- Use "name" to refer to it in `colorscheme`
+    lazy = false,      -- Load it on startup
+    priority = 1000,   -- Ensure it loads first
+  },
+  {
+      "nyoom-engineering/oxocarbon.nvim",
+      -- Add in any other configuration; 
+      --   event = foo, 
+      --   config = bar
+      --   end,
+  },
 }

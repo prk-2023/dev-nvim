@@ -1,3 +1,11 @@
+local function get_rust_analyzer_target_dir()
+    local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+    local tmp_dir = "/tmp/rust-analyzer" .. project_name
+    -- Ensure the directory exists
+    vim.fn.mkdir(tmp_dir, "p")
+    return tmp_dir
+end
+
 return {
 	{
 		"mrcjkb/rustaceanvim",
@@ -9,6 +17,10 @@ return {
 				server = {
 					settings = {
 						["rust-analyzer"] = {
+                            cargo = {
+                                -- this points RA to a unique RAM backed folder 
+                                targetDir = get_rust_analyzer_target_dir(),
+                            },
 							completion = {
 								autoimport = {
 									enable = true,
@@ -24,6 +36,7 @@ return {
 		end,
 	},
 }
+
 --------------------------------
 -- 1. rust-analyzer takes very long to download all the crates and sync with nvim settings.
 -- the below settings is an attempt to fasten this process.

@@ -2,7 +2,7 @@
 vim.opt_local.shiftwidth = 3
 --vim.cmd([[Neotree show]])
 if vim.api.nvim_win_get_width(0) > 117 then
-	vim.cmd([[TagbarToggle]])
-	vim.cmd([[TagbarOpen]])
+	vim.cmd([[SymbolsToggle]])
+	vim.cmd([[SymbolsOpen]])
 	-- 	vim.cmd([[Neotree show]])
 end

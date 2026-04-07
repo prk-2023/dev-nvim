@@ -145,7 +145,8 @@ require("lazy").setup({
 			rainbow = {
 				enable = true,
 				extended_mode = true,
-				max_file_lines = nil,
+				-- max_file_lines = nil,
+        max_file_lines = 500,
 			},
 			indent = {
 				enable = true,
@@ -262,7 +263,7 @@ require("lazy").setup({
 		cmd = { "TagbarToggle" },
 		keys = {
 			{
-				"<F8>",
+				"<F8><F8>",
 				-- "<cmd>:TagbarToggle :TagbarOpenAutoClose<CR>",
 				"<cmd>:TagbarToggle<CR>",
 				desc = "Show Tags",
@@ -975,6 +976,9 @@ require("lazy").setup({
 	require("custom.cmake-tools"), -- cmake tools
 	require("custom.typst-preview"), -- cmake tools
 	require("custom.noice"),
+  require("custom.render-markdown"),
+  require("custom.outline"),
+  require("custom.symbols"),
 	--	require("custom.typst"), -- cmake tools
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the

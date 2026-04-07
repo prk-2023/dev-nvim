@@ -59,3 +59,11 @@ vim.api.nvim_create_autocmd("BufEnter", {
 
 -- Disable relative numbers in Markdown file editing
 vim.opt.relativenumber = false
+vim.opt_local.wrap = true
+vim.opt_local.linebreak = true
+vim.opt_local.showbreak = "↪\\ "
+vim.opt_local.breakindent = true
+
+-- To prevent tagbar and Aerial update aggressively 
+vim.opt.updatetime = 300 -- Default is 4000 (4s), many people set it to 100-250. Try 300-500.
+
