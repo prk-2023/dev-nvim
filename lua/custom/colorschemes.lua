@@ -281,4 +281,22 @@ return {
       --   config = bar
       --   end,
   },
+  {
+    "nasccped/rustheme.nvim",
+    lazy = false,    -- Colorschemes should usually not be lazy-loaded
+    priority = 1000, -- Ensure it loads before other plugins
+    -- config = function()
+    --   -- 1. Set options (Note: this theme uses globals, not a setup table)
+    --   vim.g.rustheme_italic_comments = true
+    --   
+    --   -- 2. Load the colorscheme
+    --   vim.cmd("colorscheme rustheme")
+    --
+    --   -- 3. Apply your overrides AFTER loading the theme
+    --   -- This is the most reliable way to "force" the mdBook colors
+    --   vim.api.nvim_set_hl(0, "Normal", { bg = "#f6f4ee", fg = "#333333" })
+    --   vim.api.nvim_set_hl(0, "Keyword", { fg = "#d75f00", bold = true })
+    --   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#e8e6df" })
+    -- end
+  },
 }
