@@ -18,7 +18,7 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "*.md",
   callback = function()
-    vim.cmd("TSBufEnable highlight")
+    -- vim.cmd("TSBufEnable highlight")
   end,
 })
 

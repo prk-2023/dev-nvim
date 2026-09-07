@@ -274,13 +274,13 @@ return {
     lazy = false,      -- Load it on startup
     priority = 1000,   -- Ensure it loads first
   },
-  {
-      "nyoom-engineering/oxocarbon.nvim",
-      -- Add in any other configuration; 
-      --   event = foo, 
-      --   config = bar
-      --   end,
-  },
+  -- {
+  --     "nyoom-engineering/oxocarbon.nvim",
+  --     -- Add in any other configuration; 
+  --     --   event = foo, 
+  --     --   config = bar
+  --     --   end,
+  -- },
   {
     "nasccped/rustheme.nvim",
     lazy = false,    -- Colorschemes should usually not be lazy-loaded
