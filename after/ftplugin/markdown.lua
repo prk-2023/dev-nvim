@@ -67,3 +67,9 @@ vim.opt_local.breakindent = true
 -- To prevent tagbar and Aerial update aggressively 
 vim.opt.updatetime = 300 -- Default is 4000 (4s), many people set it to 100-250. Try 300-500.
 
+
+-- Wrap selected text with ** in visual mode using <leader>w
+vim.keymap.set("v", "<leader>*", '"zdi**<C-r>z**<ESC>', { desc = "Wrap with ** around visual selection" })
+
+-- Alternatively, if using the register method from before:
+vim.keymap.set("n", "**", '"zciw**<C-r>z**<ESC>', { desc = "Wrap current word with **" })
